@@ -1,0 +1,31 @@
+void main() {
+  List<int> numbers = [99,334,45,32,564,22,113,44,55,22,11,34,67,444,732,243];
+
+  // Initialize the counter variable to 0.
+  var i = 0;
+
+  // While the counter is less than the length of the list - 1,
+  while (i < numbers.length - 1) {
+    // Initialize the inner counter variable to i + 1.
+    var j = i + 1;
+
+    // While the inner counter is less than the length of the list,
+    while (j < numbers.length) {
+      // If the current number is greater than the next number,
+      if (numbers[i] > numbers[j]) {
+        // Swap the two numbers.
+        var temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
+      }
+
+      // Increment the inner counter.
+      j++;
+    } 
+    // Increment the outer counter.
+    i++;
+  }
+
+  // Print the sorted list.
+  print(numbers);
+}
