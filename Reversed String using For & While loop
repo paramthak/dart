@@ -1,4 +1,21 @@
 //Write a Dart program to reverse a string.
+
+//WHILE LOOP
+
+void main() {
+  String name = "idpohk itlu na si ayerhS";
+  int i = name.length-1;
+  String ulta = '';
+  while(i>=0){
+    var j=name[i];
+    ulta+=j;
+    i--;
+  }
+  print(ulta);
+}
+
+//FOR LOOP
+
 void main() {
   String seedha = 'Vola Hola Gola Dola Lola Bhadbola';
   String ulta = '';
