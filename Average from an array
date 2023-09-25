@@ -1,0 +1,13 @@
+//Write a Dart program to find the average of a list of numbers.
+void main() {
+  List<int> bola = [2,4,6,7,8,9,44,13,4,22,43,55];
+  int i=0;
+  int t=0;
+  while(i<bola.length) {
+    int j=bola[i];
+    t+=j;
+    i++;
+  }
+  double total=t/bola.length;
+  print('The average of the given array is $total');
+}
