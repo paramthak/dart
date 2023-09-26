@@ -1,0 +1,40 @@
+import 'dart:math';
+import 'package:flutter/material.dart';
+
+void main() {
+  // Create a list of dishes.
+  List<String> dishes = ['Pizza', 'Burger', 'Pasta', 'Salad', 'Sushi'];
+
+  // Generate a random number between 0 and the length of the list.
+  int randomIndex = Random().nextInt(dishes.length);
+
+  // Get the dish at the random index.
+  String dish = dishes[randomIndex];
+
+  // Today's lunch
+  String lunchOutput = 'Today for lunch make $dish';
+
+  // Today's dinner
+  String dinnerOutput = 'Today for dinner make $dish';
+
+  // Create a text widget to display the randomly generated dish.
+  Text dishWidget = Text(dish);
+
+  // Create a MaterialApp widget.
+  MaterialApp app = MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text('Dish Generator')),
+      body: Center(
+        child: Column(
+          children: [
+            Text(lunchOutput),
+            Text(dinnerOutput),
+          ],
+        ),
+      ),
+    ),
+  );
+
+  // Run the app.
+  runApp(app);
+}
