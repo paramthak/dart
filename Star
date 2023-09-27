@@ -1,0 +1,26 @@
+// Define the number of rows for the pattern
+int n = 5;
+
+// First half of the pattern
+for (int i = 1; i <= n; i++) {
+  // Iterate over the columns in the current row
+  for (int j = 1; j <= i; j++) {
+    // Print a star
+    stdout.write("*");
+  }
+
+  // Print a newline at the end of the row
+  stdout.writeln();
+}
+
+// Second half of the pattern
+for (int i = n - 1; i >= 1; i--) {
+  // Iterate over the columns in the current row
+  for (int j = 1; j <= i; j++) {
+    // Print a star
+    stdout.write("*");
+  }
+
+  // Print a newline at the end of the row
+  stdout.writeln();
+}
