@@ -1,0 +1,27 @@
+//Write a Python program to find those numbers which are divisible 
+//by 7 and multiples of 5, between 1500 and 2700 (both included).
+
+void main() {
+  for(int i=1500; i<=2700; i++){
+    if(i%5==0){
+      print('Number $i is divisible by 5');
+    }
+    else if(i%7==0){
+      print('Number $i is divisible by 7');
+    }
+  }
+}
+
+//Write a Python program to convert temperatures to and from Celsius and Fahrenheit.
+void main() {
+  int celsius=60;
+  int fahrenheit=45;
+  double convertedFromCelsius=(celsius*9/5)+32;
+  double convertedFromFahrenheit= fahrenheit-32;
+  double converted = convertedFromFahrenheit*5/9;
+  print('$celsius C is $convertedFromCelsius in fahrenheit');
+  print('$fahrenheit F is ${converted.truncate()} in celsius');
+}
+
+//Built in function .truncate() is used to remove any decimal points in the print statement. 
+
