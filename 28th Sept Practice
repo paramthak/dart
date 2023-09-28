@@ -1,0 +1,59 @@
+/*Write a Python program to check the validity of passwords input by users.
+Validation :
+At least 1 letter between [a-z] and 1 letter between [A-Z].
+At least 1 number between [0-9].
+At least 1 character from [$#@].
+Minimum length 6 characters.
+Maximum length 16 characters.*/
+
+void main() {
+  String password = 'Niefeafawefaeagarefraj';
+  bool hasSmallCase = false;
+  bool hasUpperCase = false;
+  bool hasCharacter = false; 
+  bool hasNumber = false; 
+
+  if(password.length<6){
+    print('Password Length too small. Min 6 Characters');
+    }
+    else if(password.length>16){
+    print('Password too long. Max 16 Characters');
+    }
+    else {
+    for(int i=0; i<password.length; i++){
+      String m=password[i];
+      if(m.codeUnitAt(0)>'a'.codeUnitAt(0) && m.codeUnitAt(0)<'z'.codeUnitAt(0)){
+        hasSmallCase=true;
+      }
+      else if(m.codeUnitAt(0)>'A'.codeUnitAt(0) && m.codeUnitAt(0)<'Z'.codeUnitAt(0)){
+        hasUpperCase=true;
+      }
+      else if(m.codeUnitAt(0)>'0'.codeUnitAt(0) && m.codeUnitAt(0)<'9'.codeUnitAt(0)){
+        hasNumber=true;
+      }
+      else if(m=='\$' || m=='#' || m=='@'){
+        hasCharacter=true;
+      }
+    }
+    if(hasNumber && hasCharacter && hasSmallCase && hasUpperCase){
+    print('Valid Password');
+    }
+    else{
+    print('Invalid Password');
+    }
+    }
+}
+
+//Write a Python program to find numbers between 100 and 400 (both included) 
+//where each digit of a number is an even number. 
+//The numbers obtained should be printed in a comma-separated sequence.
+void main() {
+  List<int> numbers = [];
+  for(int i=100; i<=400; i++){
+    String s = i.toString();
+    if(int.parse(s[0])%2==0 && int.parse(s[1])%2==0 && int.parse(s[2])%2==0){
+      numbers.add(int.parse(s));
+    }
+  }
+  print(numbers);
+}
