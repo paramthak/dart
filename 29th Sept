@@ -1,0 +1,25 @@
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+  ***                                                                   
+ *   *                                                                  
+ *   *                                                                  
+ *****                                                                  
+ *   *                                                                  
+ *   *                                                                  
+ *   */
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      if((column==1 || column==5) && row !=0 || 
+      (row==0 || row==3) && column>1 && column<5) {
+        output+='*';
+      } else{
+        output+=' ';
+      }
+    }
+    output+='\n';
+  }
+  print(output);
+}
