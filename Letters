@@ -1,0 +1,224 @@
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+  ***                                                                   
+ *   *                                                                  
+ *   *                                                                  
+ *****                                                                  
+ *   *                                                                  
+ *   *                                                                  
+ *   */
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      if((column==1 || column==5) && row !=0 || 
+      (row==0 || row==3) && column>1 && column<5) {
+        output+='*';
+      } else{
+        output+=' ';
+      }
+    }
+    output+='\n';
+  }
+  print(output);
+}
+
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+ ****                                                                   
+ *   *                                                                  
+ *   *                                                                  
+ *   *                                                                  
+ *   *                                                                  
+ *   *                                                                  
+ ****/
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++) {
+      if((row==0 || row==6) && column!=0 && column !=5 && column!=6 || (column==1 || column==5) && row>0 && row<6){
+        output+='*';
+      }
+      else {
+        output+=' ';
+      }
+    }
+    output+='\n';
+  }
+  print(output);
+}
+
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+ *****                                                                  
+ *                                                                      
+ *                                                                      
+ ****                                                                   
+ *                                                                      
+ *                                                                      
+ *****/
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      if((row==0 || row==6) && column>0 && column<6 || row==3 && column>0 && column<5 || column==1) {
+        output+='*';
+      }
+      else {
+        output+=' ';
+      }
+    }
+    output+='\n';
+  }
+  print(output);
+}
+
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+  ***                                                                   
+ *   *                                                                  
+ *                                                                      
+ * ***                                                                  
+ *   *                                                                  
+ *   *                                                                  
+  ***/
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      //To print only 3 stars in row0 & row6
+      if((row==0 || row==6) && column>1 && column<5 ||
+      //To print stars in col5 row1,3,4,5
+      (column==5) && row != 0 && row != 2 && row !=6 ||
+      //To print stars in col1 row1-5
+      (column==1) && row>0 && row<6 ||
+      //To print star in row3 col3,4
+      (row==3) && column >2 && column <6)
+      {
+        output+='*';
+      }
+      else {
+        output+=' ';
+      }
+    }
+    output+='\n';
+  }
+  print(output);
+}
+
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+ *                                                                      
+ *                                                                      
+ *                                                                      
+ *                                                                      
+ *                                                                      
+ *                                                                      
+ *****/
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      //To print only 3 stars in row0 & row6
+      if((row==6) && column>0 && column<6 || column==1)
+      {
+        output+='*';
+      }
+      else {
+        output+=' ';
+      }
+    }
+    output+='\n';
+  }
+  print(output);
+}
+
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+  *       *                                                             
+  *       *                                                             
+  * *   * *                                                             
+  *   *   *                                                             
+  *       *                                                             
+  *       *                                                             
+  *       */
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      if((column==1 || column==5) || 
+      row==2 && (column==2 || column==4) ||
+      row==3 && column==3)
+      {
+        output+='*';
+      }
+      else {
+        output+=' ';
+      }
+    }
+    output+='\n';
+  }
+  print(output);
+}
+
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+  ***                                                                   
+ *   *                                                                  
+ *   *                                                                  
+ *   *                                                                  
+ *   *                                                                  
+ *   *                                                                  
+  ***/
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      if((column==1 || column==5) && row>0 && row<6 || (row==0 || row==6) && column>1 && column<5){
+        output+='*';
+      }
+      else {
+        output+=' ';
+      }
+    }
+    output+=('\n');
+  }
+  print(output);
+}
+
+/* Write a Python program to print the alphabet pattern 'A'.
+Expected Output:
+
+ ****                                                                   
+ *   *                                                                  
+ *   *                                                                  
+ ****                                                                   
+ *                                                                      
+ *                                                                      
+ */
+void main() {
+  String output='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      //Print column1 stars
+      if(column==1 || 
+      (row==0 || row==3) && column>0 && column<5 ||
+      (row==1 || row==2) && column==5){
+        output+='*';
+      }
+      else {
+        output+=' ';
+      }
+    }
+    output+=('\n');
+  }
+  print(output);
+}
+
