@@ -222,3 +222,73 @@ void main() {
   print(output);
 }
 
+/* 
+
+  ****                                                                  
+ *                                                                      
+ *                                                                      
+  ***                                                                   
+     *                                                                  
+     *                                                                  
+ ****/
+
+ /* 
+ooooooooooooooooo                                                       
+ooooooooooooooooo                                                       
+ooooooooooooooooo                                                       
+oooo                                                                    
+oooo                                                                    
+oooo                                                                    
+ooooooooooooooooo                                                       
+ooooooooooooooooo                                                       
+ooooooooooooooooo                                                       
+             oooo                                                       
+             oooo                                                       
+             oooo                                                       
+ooooooooooooooooo                                                       
+ooooooooooooooooo                                                       
+ooooooooooooooooo */
+
+void main() {
+  String input='';
+  for(int row=0; row<7; row++){
+    for(int column=0; column<7; column++){
+      //Defining first line
+      if((row==0) && column>1 && column<6||
+      //Defining line 2&3
+      (row>0 && row<3) && column==1 ||
+      //Defining line 4
+      (row==3) && column>1 && column<5 ||
+      //Definin line 5&6
+      (row>3 && row<6) && column==5 ||
+      //Defining line7
+      (row==6) && column>0 && column<5){
+        input +=('*');
+      }
+      else{
+        input +=(' ');
+      }
+    }
+    input +=('\n');
+  }
+  print(input);
+//Below is the program for badaa waala S
+    String output='';
+  for(int row=0; row<15; row++){
+    for(int col=0; col<19; col++){
+      //Left ka gaddha
+      if((row>2 && row<6) && col>0 && col<5 || 
+      //Right ka gaddha
+      (row>8 && row<12) && col>14 && col<19 ||
+      //Baaki pure lines
+      (row!=3 && row!=4 && row!=5 && row!=9 && row!=10 && row!=11) && col>0 && col<19) {
+        output+='o';
+      }
+      else{
+        output+=' ';
+      }
+    }
+    output+=('\n');
+  }
+  print(output);
+}
