@@ -1,0 +1,40 @@
+/* Write a Python program to calculate a dog's age in dog years.
+Note: For the first two years, a dog year is equal to 10.5 human years. After that, each dog year equals 4 human years.
+Expected Output:
+Input a dog's age in human years: 15                                    
+The dog's age in dog's years is 73 */
+
+void main() {
+  int humanYears= 4;
+  double finalYears = 0;
+if(humanYears<=2){
+    double finalYears=humanYears*10.5;
+    print("The dog's age in dog's years is $finalYears");
+  }
+  else{
+    double restYears = (humanYears-2)*4;
+    double finalYears = restYears+21;
+    print("The dog's age in dog's years is $finalYears");
+  }
+}
+
+/*
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999 */
+
+import 'dart:io';
+void main() {
+  for(int i=1; i<10; i++){
+    for(int j=1; j<=i; j++){
+      stdout.write('$i');
+    }
+  stdout.writeln();
+  }
+}
