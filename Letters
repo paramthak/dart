@@ -292,3 +292,56 @@ void main() {
   }
   print(output);
 }
+/* 
+
+Write a Python program to print the alphabet pattern 'T'.
+Expected Output:
+ *****                                                                  
+   *                                                                    
+   *                                                                    
+   *                                                                    
+   *                                                                    
+   *                                                                    
+   */
+  
+  void main() {
+    String output = '';
+    for(int row=0; row<7; row++) {
+      for(int column=0; column<7; column++){
+        if((row==1) && column>0 && column<6 || (column==3) && row>0 && row<=6){
+          output+='*';
+        }
+        else{
+          output+=' ';
+        }
+      }
+      output+=('\n');
+    }
+    print(output);
+  }
+
+/* Write a Python program to print the alphabet pattern 'T'.
+Expected Output:
+*******                                                                 
+     *                                                                  
+    *                                                                   
+   *                                                                    
+  *                                                                     
+ *                                                                      
+*******/
+  
+  void main() {
+    String output = '';
+    for(int row=0; row<7; row++) {
+      for(int column=0; column<7; column++){
+        if((row==0 || row==6) && column>=0 && column<=6 || row+column==6){
+          output+='*';
+        }
+        else{
+          output+=' ';
+        }
+      }
+      output+=('\n');
+    }
+    print(output);
+  }
