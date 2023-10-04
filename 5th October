@@ -1,0 +1,21 @@
+//Write a Python function to find the maximum of three numbers.
+
+int findMax(int n1, int n2, int n3){
+  int max=n1; 
+  if (n2 > max){
+    max=n2;
+  }
+  if (n3>max){
+    max=n3;
+  }
+  return max;
+  }
+
+void main(){
+  int n1=44;
+  int n2=89;
+  int n3=90;
+
+int output=findMax(n1, n2, n3);
+print('Final $output');
+}
