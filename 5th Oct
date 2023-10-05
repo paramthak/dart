@@ -1,0 +1,32 @@
+/* Write a Python function to sum all the numbers in a list.
+Sample List : (8, 2, 3, 0, 7)
+Expected Output : 20*/
+
+int sum(List<int> input){
+  int total=0;
+  for(int i in input){
+    total+=i;
+  }
+  return total;
+}
+
+void main() {
+  print(sum([9,2,4,56,25,552,14,32,55,1]));
+}
+
+/*Write a Python function to multiply all the numbers in a list.
+Sample List : (8, 2, 3, -1, 7)
+Expected Output : -336*/
+
+int multiply(List<int> input){
+  int total=1;
+  for(int x in input){
+    total=total * x;
+  }
+  return total;
+}
+
+void main() {
+  print(multiply([9,2,4,-1,6]));
+}
+
