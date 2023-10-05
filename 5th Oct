@@ -30,3 +30,42 @@ void main() {
   print(multiply([9,2,4,-1,6]));
 }
 
+/*Write a Python program to reverse a string.
+Sample String : "1234abcd"
+Expected Output : "dcba4321"*/
+
+String reverse(String input) {
+  String output = '';
+  for(int i=input.length-1; i>=0; i--){
+    output+=input[i];
+  }
+  return output;
+}
+void main() {
+  print(reverse('1234abcd'));
+}
+
+/*Write a Python function that accepts a string and counts the number of upper and lower case letters.
+Sample String : 'The quick Brow Fox'
+Expected Output :
+No. of Upper case characters : 3
+No. of Lower case Characters : 12*/
+
+void output(String input){
+  int upperCase=0;
+  int lowerCase=0;
+  for(int i=0; i<input.length; i++){
+    if(input[i].toLowerCase() ==input[i]){
+      lowerCase+=1;
+    }
+    else if(input[i].toUpperCase()==input[i]){
+      upperCase+=1;
+    }
+  }
+  print(lowerCase);
+  print(upperCase); 
+}
+
+void main() {
+  output('DwnSFvEfva');
+}
