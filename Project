@@ -1,0 +1,41 @@
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      body: Column(
+        children: [
+          // 1st box
+          Container(
+            height: 300,
+            width: 200,
+            color: Colors.deepPurple,
+          ),
+
+          // 2nd box
+          Container(
+            height: 200,
+            width: 200,
+            color: Colors.deepPurple[400],
+          ),
+
+          // 3rd box
+          Container(
+            height: 200,
+            width: 200,
+            color: Colors.deepPurple[200],
+          ),
+        ],
+      ),
+    ),
+  );
+  }
+  }
+  
