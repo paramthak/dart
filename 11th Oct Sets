@@ -1,0 +1,33 @@
+void main() {
+  Set<int> sattar ={1,2,3,4,5};
+//Used for each for the first time. Note syntax. 
+//This and for-in loop are the only ways to iterate a set.
+  sattar.forEach((sattar) {
+    print(sattar);
+  });
+}
+
+//Write a Dart program to add member(s) to a set.
+
+void main() {
+  Set<int> sattar ={1,2,3,4,5};
+//Used add function
+//To add multiple values, gotta use addAll()
+  sattar.add(2);
+  print(sattar);
+}
+
+//Write a Dart program to remove an item from a set if it is present in the set.
+
+void main() {
+  Set<int> sattar ={1,2,3,4,5};
+  int removeNumber = 3;
+/* Here the foolowing is a lambda function. The left side of => 
+is defining the function 'where' which iterates through each element
+on the right side, its the return value or the main code block of function
+the .toSet() converts the iterable returned from where function to a set.
+In this case, we are creating a new set which doesn't have values which equal to removeNumber variable*/
+  sattar = sattar.where((x) => x != removeNumber).toSet();
+  print(sattar);
+}
+
