@@ -1,0 +1,27 @@
+
+// Creating an empty map
+Map<String, dynamic> emptyMap = {};
+
+// Creating a map with key-value pairs
+Map<String, int> ages = {
+  'Alice': 25,
+  'Bob': 30,
+  'Charlie': 22,
+};
+
+// Adding or updating a key-value pair in an existing map
+ages['David'] = 28;
+
+// Accessing values from a map
+int bobAge = ages['Bob'];
+
+// Removing a key-value pair from a map
+ages.remove('Charlie');
+
+// Checking if a map contains a key
+bool containsAlice = ages.containsKey('Alice');
+
+// Iterating over the map
+ages.forEach((key, value) {
+  print('$key is $value years old');
+});
