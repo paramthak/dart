@@ -1,0 +1,103 @@
+/*Write a dart script to concatenate the following dictionaries to create a new one.
+
+Sample Dictionary :
+dic1={1:10, 2:20}
+dic2={3:30, 4:40}
+dic3={5:50,6:60}
+Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}*/
+
+void main() {
+  Map <int, int> dic1={1:10, 2:20};
+  Map <int, int> dic2={3:30, 4:40};
+  Map <int, int> dic3={5:50, 6:60};
+
+  Map <int, int> dict = {}..addAll(dic1)..addAll(dic2)..addAll(dic3);
+  print(dict);
+}
+
+//This shows how to use add all function with three positional arguments.
+
+//Write a Dart script to check whether a given key already exists in a dictionary.
+
+void main() {
+  Map <String, int> lola = {'Hola':24, 'Gola':35, 'Bola':97};
+  if(lola.containsKey('bola')){
+    print('Yes Gola exists');
+  }
+  else{
+    print('Given key does not exist');
+  }
+}
+
+//This shows how to use containsKey function
+
+//Write a Dart program to iterate over dictionaries using for loops.
+
+void main() {
+  Map <int, int> hola = {24:03, 44:98, 90:78};
+  for(int i in hola.keys){
+    print('$i -> ${hola[i]}');
+  }
+}
+
+//Used for-in loop along with Map
+
+/*Write a Python script to print a dictionary where the keys are numbers 
+between 1 and 15 (both included) and the values are the square of the keys.
+Sample Dictionary
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 
+10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}*/
+
+void main() {
+  int input=15;
+  Map <int,int> hola ={};
+  for(int i=1; i<=input; i++){
+    hola [i] = i*i;
+  }
+  print(hola);
+}
+
+///Used for loop with Map
+
+/*Write a dart program to sum all the items in a dictionary.*/
+
+void main() {
+  Map <String,int> hola= {'Gola':78, 'Hola':-98, 'Bola':32};
+  int sum=0;
+  hola.values.forEach((i) {
+    sum+=i;
+  });
+  print(sum);
+}
+
+///Used forEach function here. 
+
+/*Write a Python program to remove a key from a dictionary.*/
+
+void main() {
+  Map <String,int> hola= {'Gola':78, 'Hola':-98, 'Bola':32};
+  hola.remove('Hola');
+  print(hola)
+;}
+
+///Used remove function
+
+/*Write a Dart program to map two lists into a dictionary.*/
+
+void main() {
+  List<int> hola=[1,2,3,4];
+  List<int> bola=[8,7,6,5];
+  Map <int,int> gola={};
+  
+  if(hola.length != bola.length){
+    print('Lengths of both keys are not equal');
+  }
+  else{
+    for(int i=0; i<bola.length; i++){
+      gola[hola[i]] = bola[i];
+    }
+  }
+  print(gola);
+}
+
+///Converted list to Map.
