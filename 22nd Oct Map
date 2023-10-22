@@ -101,3 +101,26 @@ void main() {
 }
 
 ///Converted list to Map.
+
+//Write a dart program to sort the keys in ascending value.
+void main() {
+  Map<String, int> unsortedMap = {
+    'banana': 5,
+    'apple': 2,
+    'cherry': 8,
+    'date': 1,
+    'fig': 3,
+  };
+  //Converting map to List of Map Entry
+  List<MapEntry<String,int>> hola = unsortedMap.entries.toList();
+
+  //Sorting in ascending order
+  hola.sort((a,b) => a.key.compareTo(b.key));
+
+  //Convert List of Map Entry to Map
+  Map<String,int> sorted= Map.fromEntries(hola);
+
+  print(sorted);
+}
+
+///Learned MapEntry, Cascade operator and List of MapEntry.
